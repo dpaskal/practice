@@ -5,11 +5,11 @@ all: maker taker middleman
 middleman: book.proto
 	protoc --cpp_out=. book.proto
 
-maker: ser.cpp middleman
-	g++ ser.cpp book.pb.cc -lprotobuf -pthread $(FLAGS) -o maker
+maker: maker.cpp middleman
+	g++ maker.cpp book.pb.cc -lprotobuf -pthread $(FLAGS) -o maker
 
-taker: deser.cpp middleman
-	g++ deser.cpp book.pb.cc -lprotobuf -pthread $(FLAGS) -o taker
+taker: taker.cpp middleman
+	g++ taker.cpp book.pb.cc -lprotobuf -pthread $(FLAGS) -o taker
 
 clean:
-	rm -rf maker taker
+	rm -rf maker taker book.pb*
