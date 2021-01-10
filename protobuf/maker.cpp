@@ -4,7 +4,7 @@
 int main() {
     GOOGLE_PROTOBUF_VERIFY_VERSION; // built in macro
 
- 	Person myperson;
+    Person myperson;
     myperson.set_age(200);
     myperson.set_name("Dan");
     myperson.set_email("dpaskalev@gmail.com");
