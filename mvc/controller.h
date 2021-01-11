@@ -14,7 +14,8 @@ class Controller {
                                 model(modelIn), view(viewIn) {}
         void setModel(const Model &modelIn) { model = modelIn; }
         void setView (const View &viewIn) { view = viewIn; }
-
+        void setData (const std::string s) { model.setData(s); }
+        void registerHandler(Handler handlerIn) { model.registerHandler(handlerIn); }
         void run() { view.render(); }
 }; // Controller
 

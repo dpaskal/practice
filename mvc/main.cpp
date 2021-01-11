@@ -10,12 +10,13 @@ int main() {
     View myView(myModel);
     Controller myController(myModel, myView);
 
-    myModel.registerHandler(print);
+    // User only interacts with the controller
+    myController.registerHandler(print);
 
     myController.run();
 
-    myModel.setData("0987");
-    myModel.setData("abcd");
-    myModel.setData("zyx");
+    myController.setData("0987");
+    myController.setData("abcd");
+    myController.setData("zyx");
 
 }
