@@ -7,13 +7,13 @@
 class View {
     Model model;
     public:
-        View() {}
+        View() = delete;
         View(const Model &modelIn) : model(modelIn) {}
         void setModel(const Model &modelIn){ model = modelIn; }
         void render()
         {
             // Present data
-            std::cout << "Current data: " 
+            std::cout << "Viewer data: " 
             << model.getData() << std::endl;
         }
 }; // View

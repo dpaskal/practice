@@ -8,7 +8,7 @@ class Model {
     std::string data = "";
     Handler handler;
     public:
-        Model() {}
+        Model() = delete;
         Model(const std::string &dataIn) : data(dataIn) {}
         std::string getData()               { return data; }
         void        setData(std::string newData) 
