@@ -1,5 +1,6 @@
 env = Environment(
     CC = 'g++',
+    CPPPATH = '.',
     CCFLAGS = '-pthread -g -std=c++1z -Wall -Wextra -pedantic -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wnull-dereference -Wrestrict -Wuseless-cast -Wformat=2'
 )
 
